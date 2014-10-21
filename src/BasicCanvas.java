@@ -1,3 +1,4 @@
+
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.util.Enumeration;
@@ -83,7 +84,6 @@ public class BasicCanvas extends Canvas implements Runnable {
         var_6d4 = 0L;
         chArray = new char[1];
         setFullScreenMode(main.getAppProperty("FullScreenMode").equals("true") ? true : false);
-        SetFontSize(2);
         widthInPixels = getWidth();
         heightInPixels = getHeight();
         graphicsImage = Image.createImage(widthInPixels, heightInPixels);
@@ -190,6 +190,7 @@ public class BasicCanvas extends Canvas implements Runnable {
                             while (keyPressed != 0) { // Wait for key release
                                 Thread.yield();
                             }
+
 
                             nlines = 0;
                         }
@@ -461,10 +462,15 @@ public class BasicCanvas extends Canvas implements Runnable {
 //#                     Thread.sleep(1L);
 //#                 }
 //#else
+
                 this.repaint();
                 Thread.sleep(100L);
 
 //#endif
+
+
+
+
             } catch (InterruptedException vex) {
             } catch (ArrayIndexOutOfBoundsException ex) {
             } catch (Exception ex) {
@@ -492,7 +498,7 @@ public class BasicCanvas extends Canvas implements Runnable {
                     ++this.main.offsetLine;
             }
 
-            // main.listInCanvas();
+           // main.listInCanvas();
         } else {
             this.keyPressed = var1;
             if (var1 == -8) {
