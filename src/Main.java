@@ -825,7 +825,7 @@ public class Main extends MIDlet implements BasicSupport, Runnable, CommandListe
         return calendar.get(Calendar.MILLISECOND);
     }
 
-    public Enumeration Directory(String filter) {
+    public Enumeration Directory(String filter) { // Где-то здесь баг, функция не работает
         String[] filenames = null;
         Vector v = new Vector();
         if (filter.startsWith("file://")) {
