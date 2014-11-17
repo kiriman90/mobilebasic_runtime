@@ -83,13 +83,13 @@ public class BasicCanvas extends Canvas implements Runnable {
         var_6d4 = 0L;
         chArray = new char[1];
         setFullScreenMode(main.getAppProperty("FullScreenMode").equals("true") ? true : false);
-        SetFontSize(2);
         widthInPixels = getWidth();
         heightInPixels = getHeight();
         graphicsImage = Image.createImage(widthInPixels, heightInPixels);
         graphicsGc = this.graphicsImage.getGraphics();
         offScreenImage = Image.createImage(widthInPixels, heightInPixels);
         offScreenGc = offScreenImage.getGraphics();
+        SetFontSize(2);
     }
 
     public final void SetFontSize(int fontSize) {
